@@ -5,8 +5,6 @@ body {
   padding: 0px;
   box-sizing: border-box;
   width: 1280px;
-  /* display: flex;
-  flex-direction: column; */
 }
 /* MAIN SECTION START */
 main {
@@ -41,6 +39,7 @@ main {
   margin-top: 30px;
   padding-top: 15px;
 }
+/* LOGO STYLING */
 #logo {
   /* width: 184px; */
   height: 60px;
@@ -100,6 +99,7 @@ main {
 
   color: #ffffff;
 }
+/* NAVIGATION STYLING */
 #nav_menu {
   display: inline-flex;
   /* width: 443px; */
@@ -112,8 +112,7 @@ main {
   list-style-type: none;
   margin-top: 16;
   margin-bottom: 20;
-  /* margin-left: 10;
-  margin-right: 10; */
+
   padding-left: 17.5px;
   padding-right: 17.5px;
   font-family: "Arial", Helvetica, sans-serif;
@@ -130,6 +129,7 @@ main {
 .nav_list a {
   text-decoration: none;
   transition: 0.5s;
+  color: inherit;
 }
 .nav_list a:visited {
   text-decoration: none;
@@ -175,7 +175,6 @@ main {
   font-size: 44px;
   line-height: 130%;
   padding: 0px;
-  /* text-align: left; */
   /* or 57px */
 
   display: flex;
@@ -232,14 +231,12 @@ main {
 }
 /*  */
 .button_primary:hover {
-  /* background: #f2be3c;
-  background: linear-gradient(0deg, #f0ca68 0%, #e8d197 100%);
-  transition-timing-function: ease-in; */
   font-size: 1.2rem;
   animation: neon 1.5s ease-in-out infinite alternate;
 }
 .button_primary a {
   text-decoration: none;
+  color: inherit;
 }
 .button_primary a:active {
   text-decoration: none;
@@ -248,9 +245,7 @@ main {
   text-decoration: none;
   color: inherit;
 }
-/*  */
 #start-screen-puppy {
-  /* margin-top: 163px; */
   margin-bottom: 0px;
   margin-right: 40px;
   margin-left: 50px;
@@ -368,8 +363,6 @@ main {
   padding: 15px 45px;
   margin-top: 60px;
   margin-bottom: 0px;
-  /* margin-left: 509px;
-  margin-right: 509px; */
 
   /* color-primary */
 
@@ -381,19 +374,32 @@ main {
   font-size: 17px;
   line-height: 130%;
   /* identical to box height, or 22px */
-
   letter-spacing: 0.06em;
-
   /* color-dark-3xl */
-
   color: #292929;
-
   /* Inside auto layout */
-
   flex: none;
   order: 0;
   align-self: center;
   flex-grow: 0;
+  transition: 0.5s;
+}
+/* btn_know_the_rest - STYLING  */
+#btn_know_the_rest:hover {
+  /* font-size: 1.2rem; */
+  box-shadow: 0px 15px 20px #9ca09e6b;
+  color: #fff;
+}
+#btn_know_the_rest a {
+  text-decoration: none;
+  color: inherit;
+}
+#btn_know_the_rest a:active {
+  text-decoration: none;
+}
+#btn_know_the_rest a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 .slider {
   display: flex;
@@ -401,7 +407,7 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-
+/* ARROW BUTTONS INTERACTIVE */
 .btn_arrow {
   /* button_arrow */
   /* Auto layout */
@@ -416,21 +422,27 @@ main {
   box-sizing: border-box;
   border-radius: 100px;
 }
+/* .btn_arrow:before {
+  height: 0%;
+  width: 2px;
+} */
+.btn_arrow:hover {
+  background-color: #e6b9a8;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 2px 2px 4px 0 rgba(107, 104, 104, 0.4);
+}
+/* SLIDE CARD ANIMATION */
 .slider_card {
   /* card */
-
-  /* width: 270px;
-  height: 435px; */
-
   /* color-light-s */
-
   background: #fafafa;
   border-radius: 9px;
 }
 .slider_card > img {
   /* pets-katrine */
   padding: 0px;
-  /* margin-bottom: 37.93%; */
   border-radius: 9px 9px 0px 0px;
 }
 .slider_card > p {
@@ -453,6 +465,17 @@ main {
   /* color-dark-l */
 
   color: #545454;
+}
+.slider_card img {
+  transition: all 1.2s ease-in-out;
+}
+
+.slider_card:hover img {
+  transform: rotateY(180deg);
+}
+.slider_card:hover {
+  border-radius: 20px;
+  background: #b8b6b1da;
 }
 .btn_learn_more {
   /* button_primary */
@@ -482,6 +505,26 @@ main {
   letter-spacing: 0.06em;
   /* color-dark-l */
   color: #545454;
+  transition: 0.5s;
+}
+.btn_learn_more:hover {
+  /* font-size: 1.2rem; */
+  box-shadow: 0px 15px 20px #5e605f6b;
+  color: #fff;
+  background: #e6b9a8;
+}
+
+.btn_learn_more a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn_learn_more a:active {
+  text-decoration: none;
+}
+.btn_learn_more a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 /* HELP SECTION */
 #help_container {
@@ -729,7 +772,6 @@ footer h4 {
 footer a {
   display: flex;
   flex-direction: row;
-  /* justify-content: flex-start; */
   text-decoration: none;
 }
 .footer_info {
