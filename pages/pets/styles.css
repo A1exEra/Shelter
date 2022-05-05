@@ -151,7 +151,7 @@ body {
 }
 .pets_content {
   padding: 0px;
-  margin: 80px 40px 75px 40px;
+  margin: 80px 40px 85px 40px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -244,7 +244,6 @@ body {
   box-sizing: border-box;
   border-radius: 100px;
   background: none;
-  /* Inside auto layout */
 
   /* pets-card-title */
 
@@ -253,12 +252,10 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 23px;
-  /* identical to box height */
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  /* color-dark-l */
   color: #545454;
   transition: 0.5s;
 }
@@ -285,74 +282,46 @@ body {
 .navigation_btns {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  width: 340px;
+  justify-content: space-between;
   margin: 20px auto;
 }
 /* ARROW BUTTONS INTERACTIVE */
 .btn_arrow {
-  /* button_arrow */
-  /* Auto layout */
-  padding: 23px 19px;
+  padding: 25px 20px;
   width: 52px;
   height: 52px;
   margin: 5px 10px;
-  /* color-primary */
   border: 2px solid #f1cdb3;
   box-sizing: border-box;
   border-radius: 100px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.btn_arrow a {
-  text-decoration: none;
-}
-.btn_arrow h4 {
-  /* h4 */
-  padding: 0px;
-  margin: 0px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 1.5rem;
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
-  /* identical to box height, or 23px */
-
+  text-align: center;
   letter-spacing: 0.06em;
-
-  /* color-dark-s */
-
+  margin: 0px;
+  padding: 0px;
+  color: #292929;
+  background: transparent;
+}
+.slider_button3 {
+  background-color: #e6b9a8;
+}
+.slider_button1,
+.slider_button2 {
+  border: 2px solid #cdcdcd;
   color: #cdcdcd;
 }
-/* .btn_arrow:before {
-    height: 0%;
-    width: 2px;
-  } */
 .btn_arrow:hover {
   background-color: #e6b9a8;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
     -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 2px 2px 4px 0 rgba(107, 104, 104, 0.4);
-}
-#btn_number h4 {
-  /* h4 */
-
-  font-family: "Georgia";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 115%;
-  /* identical to box height, or 23px */
-  text-align: center;
-  letter-spacing: 0.06em;
-  margin: 0px;
-  padding: 0px;
-  /* color-dark-3xl */
-
-  color: #292929;
 }
 /* <<<<<<<<<<<< FOOTER SECTION >>>>>>>>>>>>> */
 footer {
