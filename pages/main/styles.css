@@ -1,10 +1,8 @@
 body {
-  margin: 0px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0px auto;
   padding: 0px;
   box-sizing: border-box;
-  width: 1280px;
+  max-width: 1280px;
 }
 /* MAIN SECTION START */
 main {
@@ -12,6 +10,7 @@ main {
   padding: 0px;
   display: flex;
   flex-direction: column;
+  box-sizing: inherit;
 }
 /* Stat of the START_SCREEN_CONTAINER */
 .start_screen_container {
@@ -19,25 +18,23 @@ main {
   padding: 0;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  /* start-screen-gradient-background */
-
   background: url(../../assets/images/start-screen-background.png),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
-  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
 }
 /* HEADER */
 #header {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 1200px;
   height: 60px;
   margin-left: calc(50% - 1200px / 2 - 5px);
   margin-top: 30px;
   padding-top: 15px;
+}
+.burger {
+  display: none;
 }
 /* LOGO STYLING */
 #logo {
@@ -167,38 +164,24 @@ main {
   text-align: start;
 }
 #content h2 {
-  /* h2 */
-
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   font-size: 44px;
   line-height: 130%;
   padding: 0px;
-  /* or 57px */
-
   display: flex;
   align-items: center;
-
-  /* color-light-xl */
-
   color: #ffffff;
 }
 #content p {
-  /* paragraph-l */
-
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
-  /* or 24px */
-
   display: flex;
   align-items: center;
-
-  /* color-dark-s */
-
   color: #cdcdcd;
 }
 /* MAKE A FRIEND BUTTON STYLING */
@@ -209,27 +192,18 @@ main {
   padding: 0px;
   border-radius: 100px;
   padding: 15px, 45px, 15px, 45px;
-  /* color-primary */
-
   background: #f1cdb3;
   border-radius: 100px;
   text-align: center;
-
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
-  /* identical to box height, or 22px */
-
   letter-spacing: 0.06em;
-
-  /* color-dark-3xl */
-
   color: #292929;
   transition: 0.5s;
 }
-/*  */
 .button_primary:hover {
   font-size: 1.2rem;
   animation: neon 1.5s ease-in-out infinite alternate;
@@ -281,8 +255,6 @@ main {
   padding: 0px;
 }
 #about_content h3 {
-  /* h3 */
-
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -290,19 +262,12 @@ main {
   line-height: 130%;
   padding: 0px;
   margin: 10px;
-  /* or 45px */
-
   display: flex;
   align-items: center;
   letter-spacing: 0.06em;
-
-  /* color-dark-l */
-
   color: #545454;
 }
 #about_content p {
-  /* paragraph-l */
-
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -310,13 +275,8 @@ main {
   line-height: 160%;
   padding: 5px;
   margin: 0px;
-  /* or 24px */
-
   display: flex;
   align-items: center;
-
-  /* color-dark-xl */
-
   color: #4c4c4c;
 }
 /* PETS SLIDER SECTION */
@@ -341,31 +301,19 @@ main {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
-  /* or 45px */
-
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-
-  /* color-dark-l */
-
   color: #545454;
 }
 #btn_know_the_rest {
-  /* button_primary */
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 15px 45px;
   margin-top: 60px;
   margin-bottom: 0px;
-
-  /* color-primary */
-
   background: #f1cdb3;
   border-radius: 100px;
   font-family: "Georgia";
@@ -373,11 +321,8 @@ main {
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
-  /* identical to box height, or 22px */
   letter-spacing: 0.06em;
-  /* color-dark-3xl */
   color: #292929;
-  /* Inside auto layout */
   flex: none;
   order: 0;
   align-self: center;
@@ -386,7 +331,6 @@ main {
 }
 /* btn_know_the_rest - STYLING  */
 #btn_know_the_rest:hover {
-  /* font-size: 1.2rem; */
   box-shadow: 0px 15px 20px #9ca09e6b;
   color: #fff;
 }
@@ -409,23 +353,16 @@ main {
 }
 /* ARROW BUTTONS INTERACTIVE */
 .btn_arrow {
-  /* button_arrow */
-  /* Auto layout */
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 23px 19px;
   width: 52px;
   height: 52px;
-  /* color-primary */
   border: 2px solid #f1cdb3;
   box-sizing: border-box;
   border-radius: 100px;
 }
-/* .btn_arrow:before {
-  height: 0%;
-  width: 2px;
-} */
 .btn_arrow:hover {
   background-color: #e6b9a8;
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
@@ -435,35 +372,23 @@ main {
 }
 /* SLIDE CARD ANIMATION */
 .slider_card {
-  /* card */
-  /* color-light-s */
   background: #fafafa;
   border-radius: 9px;
 }
 .slider_card > img {
-  /* pets-katrine */
   padding: 0px;
   border-radius: 9px 9px 0px 0px;
 }
 .slider_card > p {
-  /* Katrine */
-  /* pets-card-title */
-
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 23px;
-  /* identical to box height */
   padding: 0px;
   margin: 30px 0px;
-  /* display: flex;
-  align-items: center; */
   text-align: center;
   letter-spacing: 0.06em;
-
-  /* color-dark-l */
-
   color: #545454;
 }
 .slider_card img {
@@ -478,32 +403,23 @@ main {
   background: #b8b6b1da;
 }
 .btn_learn_more {
-  /* button_primary */
-  /* Auto layout */
   padding: 15px 45px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  /* color-primary */
   border: 2px solid #f1cdb3;
   box-sizing: border-box;
   border-radius: 100px;
   background: none;
-  /* Inside auto layout */
-
-  /* pets-card-title */
-
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 23px;
-  /* identical to box height */
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  /* color-dark-l */
   color: #545454;
   transition: 0.5s;
 }
@@ -534,23 +450,17 @@ main {
   margin: 80px 40px 0px;
 }
 #inner_help_container h3 {
-  /* h3 */
-
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
-  /* or 45px */
   padding: 0px;
   margin: 0px 445px 30px;
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-
-  /* color-dark-l */
-
   color: #545454;
 }
 #help_list_icons {
@@ -575,22 +485,16 @@ main {
   height: 60px;
 }
 .icon_svg > h4 {
-  /* h4 */
   margin: 10px auto;
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
-  /* identical to box height, or 23px */
-
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-
-  /* color-dark-l */
-
   color: #545454;
 }
 
@@ -616,8 +520,6 @@ main {
   margin: 0px 0px 0px 15px;
 }
 #payment h3 {
-  /* h3 */
-
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -625,19 +527,12 @@ main {
   line-height: 130%;
   padding: 0px;
   margin: 0px;
-  /* or 45px */
-
   display: flex;
   align-items: center;
   letter-spacing: 0.06em;
-
-  /* color-dark-l */
-
   color: #545454;
 }
 #payment h5 {
-  /* h5 */
-
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -645,14 +540,9 @@ main {
   line-height: 110%;
   padding: 0px;
   margin: 20px;
-  /* identical to box height, or 17px */
-
   display: flex;
   align-items: center;
   letter-spacing: 0.06em;
-
-  /* color-dark-l */
-
   color: #545454;
 }
 #bank_number {
@@ -661,7 +551,6 @@ main {
   align-content: flex-start;
   width: 349px;
   height: 43px;
-  /* color-primary */
   padding: 0px;
   margin: 0px;
   background: #f1cdb3;
@@ -677,41 +566,27 @@ main {
   text-decoration: none;
 }
 #bank_number h4 {
-  /* h4 */
   padding: 0px;
   padding-left: 10px;
   margin: 10px 10px 10px 0px;
-
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
-  /* identical to box height, or 23px */
-
   display: flex;
   align-items: center;
   letter-spacing: 0.06em;
-
-  /* color-dark-l */
-
   color: #545454;
 }
 #payment p {
-  /* donation-description */
-
   font-family: "Arial";
   font-style: italic;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  /* or 150% */
-
   display: flex;
   align-items: center;
-
-  /* color-dark-m */
-
   color: #b2b2b2;
 }
 /* <<<<<<<<<<<< FOOTER SECTION >>>>>>>>>>>>> */
@@ -733,40 +608,25 @@ footer {
 #footer_img {
   padding: 0px;
   margin: 40px 40px 0px 80px;
-  /* height: 310px; */
 }
 footer h3 {
-  /* h3 */
-
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
-  /* or 45px */
-
   letter-spacing: 0.06em;
-
-  /* color-light-xl */
-
   color: #ffffff;
   padding: 0px;
   margin: 0px;
 }
 footer h4 {
-  /* h4 */
-
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
-  /* identical to box height, or 23px */
-
   letter-spacing: 0.06em;
-
-  /* color-primary */
-
   color: #f1cdb3;
 }
 footer a {
@@ -786,4 +646,573 @@ footer a {
 }
 .footer_icons h4 {
   margin: 20px 0px 20px 10px;
+}
+/* MEDIA QUERIES */
+@media (max-width: 1279px) {
+  html {
+    min-width: 767px;
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+  }
+  /* Stat of the START_SCREEN_CONTAINER */
+  .start_screen_container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+  }
+  /* HEADER */
+  #header {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px;
+    margin: 30px 20px;
+    max-width: 90vw;
+    flex: 1;
+  }
+  /* LOGO STYLING */
+  #logo {
+    margin: 0px;
+    padding: 5px;
+  }
+  /* NAVIGATION STYLING */
+  #nav_menu {
+    display: flex;
+    padding: 0;
+  }
+
+  .nav_list {
+    margin-top: 16;
+    margin-bottom: 20;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1rem;
+  }
+  #start-screen-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+  }
+  #content {
+    max-width: 500px;
+    margin: 0px auto;
+    text-align: start;
+  }
+
+  #content h2 {
+    font-size: 2.5rem;
+    line-height: 130%;
+    padding: 0px;
+    width: 310px;
+  }
+  #content p {
+    font-size: 1rem;
+    line-height: 160%;
+
+    width: 460px;
+  }
+  /* MAKE A FRIEND BUTTON STYLING */
+  .button_primary {
+    margin: 40px 125px 0px 125px;
+  }
+  #start-screen-puppy {
+    margin-bottom: 100px 0px 0px 0px;
+  }
+  #start_puppy {
+    max-height: 600px;
+    max-width: 570px;
+    margin: 100px 0px 0px 0px;
+    padding: 0px;
+  }
+  /* About section */
+  #about_container {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    margin-left: 165px;
+    margin-right: 165px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #about_container img {
+    padding: 0;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 410px;
+  }
+  #about_content {
+    margin: 0px;
+    padding: 5px;
+  }
+  #about_content h3 {
+    font-size: 2.1rem;
+  }
+  #about_content p {
+    font-size: 1rem;
+    padding: 0px;
+    margin: 0px;
+  }
+  #about_content p:nth-child(2) {
+    padding: 0px;
+    margin: 25px 0px;
+  }
+  /* PETS SLIDER SECTION */
+  #pets_outer {
+    background: #f6f6f6;
+  }
+  #pets_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 80px auto 100px auto;
+  }
+  #pets_container h3 {
+    max-width: 500px;
+    padding: 5px;
+    margin: 0px auto;
+    font-size: 2rem;
+    line-height: 130%;
+  }
+  #btn_know_the_rest {
+    padding: 15px 45px;
+    margin: 0px auto;
+    font-size: 1.1rem;
+  }
+  .slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    margin: 60px 30px;
+  }
+  .slider:last-child {
+    display: none;
+  }
+  /* ARROW BUTTONS INTERACTIVE */
+  .btn_arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 23px 19px;
+    margin: 0px;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #f1cdb3;
+    box-sizing: border-box;
+    border-radius: 100px;
+  }
+  /* SLIDE CARD ANIMATION */
+  .slider_card {
+    background: #fafafa;
+    border-radius: 9px;
+    padding: 0px;
+    margin: 0px 10px;
+  }
+  .woody {
+    display: none;
+  }
+  /* HELP SECTION */
+  #help_container {
+    background-color: #ffffff;
+  }
+  #inner_help_container {
+    margin: 80px auto 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #inner_help_container h3 {
+    font-size: 2.2rem;
+    padding: 0px;
+    margin: 0px auto 60px auto;
+    text-align: center;
+    max-width: 40%;
+  }
+  #help_list_icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 0px;
+    margin: 0px;
+  }
+  .icon_svg {
+    padding: 0px;
+    margin: 0px;
+    flex: 1 1 33.33%;
+  }
+  /* DONATION SECTION */
+  #donation_outer {
+    background: #f6f6f6;
+  }
+  #donation_inner {
+    padding: 0px;
+    margin: 80px 180px 100px 180px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #donation_img {
+    width: fit-content;
+    padding: 0px;
+    margin: 30px auto 0px auto;
+  }
+  #donation_img img {
+    width: fit-content;
+    margin: 0px;
+    padding: 0px;
+  }
+  #payment {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 0px;
+    margin: 0px auto 30px auto;
+    max-width: 380px;
+    text-align: start;
+  }
+  #payment h3 {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    padding: 0px;
+    margin: 0px;
+  }
+  #payment h5 {
+    font-size: 1rem;
+    padding: 0px;
+    margin: 20px 0px;
+  }
+  /* <<<<<<<<<<<< FOOTER SECTION >>>>>>>>>>>>> */
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #footer_contacts {
+    padding: 0px;
+    margin: 30px 30px 65px 65px;
+    flex: 2;
+  }
+  #footer_location {
+    flex: 2;
+    padding: 0px;
+    margin: 30px 65px 65px 30px;
+  }
+  #footer_img {
+    flex: 1 1 60%;
+    padding: 0px;
+    margin: 0px;
+  }
+  #footer_img img {
+    width: 300px;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
+@media (max-width: 767px) {
+  html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+  }
+  /* Stat of the START_SCREEN_CONTAINER */
+  .start_screen_container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+  }
+  /* HEADER */
+  #header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 0px 60px 10px;
+    margin: 0px;
+    max-width: 95vw;
+    /* flex: 1; */
+  }
+  /* NAVIGATION STYLING */
+  .burger {
+    margin: 5px;
+    padding: 5px;
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    /* flex: 1 1 10%; */
+  }
+  .burger:hover {
+    font-size: 1.2rem;
+    animation: neon 1.5s ease-in-out infinite alternate;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  #nav_menu {
+    display: none;
+  }
+  /* LOGO STYLING */
+  #logo {
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+    /* flex: 2 2 50%; */
+  }
+  #start-screen-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+  }
+  #content {
+    max-width: 100%;
+    margin: 0px;
+    text-align: center;
+  }
+
+  #content h2 {
+    font-size: 2rem;
+    line-height: 130%;
+    padding: 0px;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #content p {
+    font-size: 1rem;
+    line-height: 160%;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+  }
+  /* MAKE A FRIEND BUTTON STYLING */
+  .button_primary {
+    margin: 40px auto 0px auto;
+  }
+  #start-screen-puppy {
+    margin-bottom: 105px 0px 0px 0px;
+  }
+  #start_puppy {
+    height: auto;
+    width: 90%;
+    margin: 105px 0px 0px 0px;
+    padding: 0px;
+  }
+  /* About section */
+  #about_container {
+    margin: 42px 10px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #about_container img {
+    padding: 0px;
+    margin: 42px 0px 0px 20px;
+    width: 95%;
+    /* height: 410px; */
+  }
+  #about_content {
+    margin: 0px 10px;
+    padding: 0px;
+    text-align: center;
+  }
+  #about_content h3 {
+    font-size: 2.1rem;
+  }
+  #about_content p {
+    font-size: 1rem;
+    padding: 0px;
+    margin: 0px;
+  }
+  #about_content p:nth-child(2) {
+    padding: 0px;
+    margin: 25px 0px;
+  }
+  /* PETS SLIDER SECTION */
+  #pets_outer {
+    background: #f6f6f6;
+    margin: 0px;
+    padding: 0px;
+  }
+  #pets_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 42px 10px;
+  }
+  #pets_container h3 {
+    padding: 5px;
+    margin: 0px auto;
+    font-size: 2rem;
+    line-height: 130%;
+  }
+  #btn_know_the_rest {
+    padding: 15px 45px;
+    margin: 0px 30px 20px 30px;
+    font-size: 1.1rem;
+  }
+  .slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    margin: 42px 15px;
+    max-height: 550px;
+  }
+  .jennifer {
+    display: none;
+  }
+  /* ARROW BUTTONS INTERACTIVE */
+  .btn_arrow {
+    position: relative;
+    margin: 20px 40px 42px 40px;
+  }
+  .btn_arrow:first-child {
+    top: 0px;
+    right: 75px;
+  }
+  .btn_arrow:last-child {
+    top: -110px;
+    left: 75px;
+  }
+  /* SLIDE CARD ANIMATION */
+  .slider_card {
+    background: #fafafa;
+    border-radius: 9px;
+    padding: 0px;
+    margin: 0px 10px;
+    order: -1;
+  }
+  .woody {
+    display: none;
+  }
+  /* HELP SECTION */
+  #help_container {
+    background-color: #ffffff;
+  }
+  #inner_help_container {
+    margin: 80px auto 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #inner_help_container h3 {
+    font-size: 2rem;
+    padding: 0px;
+    margin: 42px 50px;
+    text-align: center;
+    max-width: 60%;
+  }
+  #help_list_icons {
+    margin: 0px 15px 42px 15px;
+    height: 550px;
+  }
+  .icon_svg {
+    padding: 0px;
+    margin: 0px;
+    flex: 1 1 45%;
+  }
+  /* DONATION SECTION */
+  #donation_outer {
+    background: #f6f6f6;
+  }
+  #donation_inner {
+    padding: 0px;
+    margin: 0px 0px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #donation_img {
+    width: fit-content;
+    padding: 0px;
+    margin: 30px auto 0px auto;
+  }
+  #donation_img img {
+    width: 70%;
+    max-width: 70%;
+    margin: 0px 40px 42px 50px;
+    padding: 0px;
+  }
+  #payment {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 0px;
+    margin: 42px auto;
+    max-width: 90%;
+    text-align: center;
+  }
+  #payment h3 {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 130%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+  #payment h5 {
+    font-size: 1rem;
+    padding: 0px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  #bank_number {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+  }
+  #bank_number h4 {
+    padding: 5px;
+    margin: 10px auto;
+    font-size: 90%;
+  }
+  /* <<<<<<<<<<<< FOOTER SECTION >>>>>>>>>>>>> */
+  footer {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    align-items: center;
+  }
+  #footer_contacts {
+    padding: 0px;
+    margin: 30px 10px 40px 10px;
+    text-align: center;
+  }
+  #footer_location {
+    padding: 0px;
+    margin: 0px 10px 40px 10px;
+    text-align: center;
+  }
+  #footer_img {
+    padding: 0px;
+    margin: 0px;
+  }
+  #footer_img img {
+    width: 300px;
+    padding: 0px;
+    margin: 0px auto;
+  }
 }
