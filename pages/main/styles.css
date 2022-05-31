@@ -33,33 +33,30 @@ main {
   margin-top: 30px;
   padding-top: 15px;
 }
+/*Burger popup menu START*/
 .burger {
   display: none;
 }
+.hidden {
+  display: none;
+}
+/*Burger popup menu END*/
 /* LOGO STYLING */
 #logo {
-  /* width: 184px; */
   height: 60px;
   height: 60px;
   margin: 0px;
   padding: 0px;
 }
 #logo_title {
-  /* logo_title */
-
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 15%;
-  /* or 35px */
-
   display: flex;
   align-items: center;
   letter-spacing: 0.06em;
-
-  /* color-primary */
-
   color: #f1cdb3;
   transition: 0.5s;
 }
@@ -77,29 +74,21 @@ main {
   }
 }
 #logo_subtitle {
-  /* logo_subtitle */
-
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 15px;
-  /* identical to box height */
-
   display: flex;
   align-items: center;
   letter-spacing: 0.1em;
   padding: 0px;
   margin: 0px;
-
-  /* color-light-xl */
-
   color: #ffffff;
 }
 /* NAVIGATION STYLING */
 #nav_menu {
   display: inline-flex;
-  /* width: 443px; */
   height: 27px;
   left: 757px;
   top: 16px;
@@ -117,10 +106,6 @@ main {
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
-  /* identical to box height, or 24px */
-
-  /* color-dark-s */
-
   color: #cdcdcd;
 }
 .nav_list a {
@@ -932,6 +917,92 @@ footer a {
     min-width: 320px;
     scroll-behavior: smooth;
   }
+  /*Burger popup menu START*/
+  .popup {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(../../assets/images/background_popUp.jpg);
+    margin: 0px;
+    padding: 0px;
+    width: 320px;
+    height: 100%;
+    z-index: 4;
+  }
+  .logo_none {
+    opacity: 0;
+  }
+  .hidden {
+    display: flex;
+  }
+  .logo_popup {
+    padding: 30px 60px 140px 10px;
+    margin: 0px;
+    width: 75%;
+  }
+  .logo_title {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 15%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #f1cdb3;
+    transition: 0.5s;
+  }
+  .logo_title {
+    animation: neon 1.5s ease-in-out infinite alternate;
+  }
+  .logo_subtitle {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+    padding: 0px;
+    margin: 0px;
+    color: #ffffff;
+  }
+  /* NAVIGATION STYLING */
+  .nav_popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0px 40px;
+  }
+  .nav_list {
+    font-size: 1.5rem;
+    margin: 20px;
+    padding: 0px;
+  }
+  .burger {
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    z-index: 10;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    margin: 35px 5px 5px 5px;
+    padding: 5px;
+  }
+  .burger:hover {
+    font-size: 1.2rem;
+    animation: neon 1.5s ease-in-out infinite alternate;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  /*Burger popup menu END*/
   /* Stat of the START_SCREEN_CONTAINER */
   .start_screen_container {
     margin: 0;
@@ -950,25 +1021,8 @@ footer a {
     padding: 30px 0px 60px 10px;
     margin: 0px;
     max-width: 95vw;
-    /* flex: 1; */
   }
   /* NAVIGATION STYLING */
-  .burger {
-    margin: 5px;
-    padding: 5px;
-    display: block;
-    background: rgba(0, 0, 0, 0.1);
-    border: none;
-    border-radius: 10px;
-    transition: 0.5s;
-    /* flex: 1 1 10%; */
-  }
-  .burger:hover {
-    font-size: 1.2rem;
-    animation: neon 1.5s ease-in-out infinite alternate;
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0.3);
-  }
   #nav_menu {
     display: none;
   }
@@ -976,7 +1030,6 @@ footer a {
   #logo {
     margin: 0px;
     padding: 0px 0px 0px 0px;
-    /* flex: 2 2 50%; */
   }
   #start-screen-content {
     display: flex;
@@ -1029,7 +1082,6 @@ footer a {
     padding: 0px;
     margin: 42px 0px 0px 20px;
     width: 95%;
-    /* height: 410px; */
   }
   #about_content {
     margin: 0px 10px;
