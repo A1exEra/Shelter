@@ -37,7 +37,7 @@ main {
 .burger {
   display: none;
 }
-.hidden {
+.popup {
   display: none;
 }
 /*Burger popup menu END*/
