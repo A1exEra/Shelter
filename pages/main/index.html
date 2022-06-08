@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="./script.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="./burger.js"></script>
+    <script defer src="./carousel.js"></script>
     <title>Shelter Main Page</title>
   </head>
   <body>
@@ -30,6 +31,7 @@
           </ul>
           <button class="burger"><img src="../../assets/icons/Burger.svg" alt="burger menu"></button>
         </header>
+        <div id="popupContainer"></div>
         <header class="popup">
           <div class="logo_popup">
             <h1 class="logo_title">Crazy Horse</h1>
@@ -95,39 +97,97 @@
         <div id="pets_container">
           <h3>Our friends who are looking for a house</h3>
           <div class="slider">
-            <button type="button" class="btn_arrow arrowLeft">
+            <button type="button" class="btn_arrow arrowLeft" onclick="plusSlides(-1)">
               <img
-                src="../../assets/images/Arrow-left.png"
-                alt="slider-button-left"
+              src="../../assets/images/Arrow-left.png"
+              alt="slider-button-left"
               />
             </button>
-            <div class="slider_card catrine">
+            <div class="cardWrapper">
+              <div class="slider_card">
               <img src="../../assets/images/pets-katrine.png" alt="Katrine" />
-              <p>Katrine</p>
+              <p class="findPetName">Katrine</p>
+              <button type="button" class="btn_learn_more"><a href="#">Learn More</a></button>
+          </div>
+            <div class="slider_card">
+              <img src="../../assets/images/pets-jennifer.png" alt="Jennifer" />
+              <p class="findPetName">Jennifer</p>
               <button type="button" class="btn_learn_more"><a href="#">Learn More</a></button>
             </div>
-            <div class="slider_card jennifer">
-              <img src="../../assets/images/pets-jennifer.png" alt="Jennijer" />
-              <p>Jennifer</p>
-              <button type="button" class="btn_learn_more"><a href="#">Learn More</a></button>
-            </div>
-            <div class="slider_card woody">
+            <div class="slider_card">
               <img src="../../assets/images/pets-woody.png" alt="Woody" />
-              <p>Woody</p>
+              <p class="findPetName">Woody</p>
+              <button type="button" class="btn_learn_more"><a href="#">Learn More</a></button>
+                </div>
+              <div class="slider_card">
+              <img src="../../assets/images/pets-charly.png" alt="Charly" />
+              <p class="findPetName">Charly</p>
+              <button type="button" class="btn_learn_more"><a href="#">Learn More</a></button>
+          </div>
+            <div class="slider_card">
+              <img src="../../assets/images/pets-freddie.png" alt="Freddie" />
+              <p class="findPetName">Freddie</p>
               <button type="button" class="btn_learn_more"><a href="#">Learn More</a></button>
             </div>
-            <button type="button" class="btn_arrow arrowRight">
+            <div class="slider_card">
+              <img src="../../assets/images/pets-scarlet.png" alt="Scarlett" />
+              <p class="findPetName">Scarlett</p>
+              <button type="button" class="btn_learn_more"><a href="#">Learn More</a></button>
+                </div>
+            <div class="slider_card">
+              <img src="../../assets/images/pets-sofia.png" alt="Sophia" />
+              <p class="findPetName">Sophia</p>
+              <button type="button" class="btn_learn_more"><a href="#">Learn More</a></button>
+            </div>
+            <div class="slider_card">
+              <img src="../../assets/images/pets-timmy.png" alt="Timmy" />
+              <p class="findPetName">Timmy</p>
+              <button type="button" class="btn_learn_more"><a href="#">Learn More</a></button>
+                </div>
+            </div>
+            
+            <button type="button" id="lastChild" class="btn_arrow arrowRight" onclick="plusSlides(1)">
               <img
                 src="../../assets/images/Arrow-right.png"
                 alt="slider-button-right"
               />
             </button>
           </div>
+          <!-- MODAL START -->
+          <div class="petModal closeModal">
+
+            <button class="BtnCloseModal">&times;</button>
+            <div class="modalInfoContainer">
+            <!-- <div class="modalImg">
+              <img src="${petImg}" alt="${name}">
+            </div>
+            <div class="textModal">
+              <h2 class="petName">${name}</h2>
+              <p class="petBreed">${breed}</p>
+              <p class="petDescription">${description}</p>
+              <ul class="petList">
+                <li class="petInfo">
+                  <b>Age</b>: ${age}
+                </li>
+                <li class="petInfo">
+                  <b>Inoculations</b>: ${inoculations}
+                </li>
+                <li class="petInfo">
+                  <b>Diseases</b>: ${diseases}
+                </li>
+                <li class="petInfo">
+                  <b>Parasites</b>: ${parasites}
+                </li>
+              </ul>
+            </div>-->
+          </div>
+         </div>
+          <!-- MODAL END -->
           <button type="button" id="btn_know_the_rest">
             <a href="#">Get to know the rest</a>
           </button>
         </div>
-      </div>
+       </div>
       <div id="help_container">
         <div id="inner_help_container">
           <h3>How you can help our shelter</h3>

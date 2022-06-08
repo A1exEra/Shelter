@@ -1,0 +1,31 @@
+"use strict";
+const burger = document.querySelector(`.burger`);
+const popup = document.querySelector(`.popup`);
+const logo = document.querySelector(`#logo`);
+const popupContainer = document.querySelector(`#popupContainer`);
+const overflow = document.querySelector(`html`);
+console.log(popupContainer);
+burger.addEventListener(`click`, (e) => {
+  e.preventDefault();
+  logo.classList.toggle(`logo_none`);
+  popupContainer.classList.toggle(`backgroundOpacity`);
+  overflow.classList.toggle(`overflow`);
+  console.log(`Burger clicked`);
+  burger.classList.toggle(`rotate`);
+  popup.classList.toggle(`hidden`);
+  popup.classList.toggle(`showPopup`);
+  console.log(overflow);
+  console.log(popup);
+  console.log(logo);
+  overflow.addEventListener(`click`, (e) => {
+    // e.preventDefault();
+    logo.classList.remove(`logo_none`);
+    popupContainer.classList.remove(`backgroundOpacity`);
+    overflow.classList.remove(`overflow`);
+    console.log(`Burger clicked`);
+    burger.classList.remove(`rotate`);
+    popup.classList.toggle(`hidden`);
+    popup.classList.remove(`showPopup`);
+  });
+  e.stopPropagation();
+});
